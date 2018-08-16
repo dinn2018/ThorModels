@@ -1,0 +1,11 @@
+framework module ThorModels {
+  umbrella header "ThorModels.h"
+
+  export *
+  module * { export * }
+}
+
+module ThorModels.Swift {
+    header "ThorModels-Swift.h"
+    requires objc
+}

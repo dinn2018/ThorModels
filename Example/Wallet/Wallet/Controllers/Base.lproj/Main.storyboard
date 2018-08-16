@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" hasShadow="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" titleVisibility="hidden" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <rect key="contentRect" x="480" y="240" width="720" height="480"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="600" height="480"/>
+                        <value key="minFullScreenContentSize" type="size" width="600" height="480"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-27" y="-485"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController id="XfG-lQ-9wD" customClass="MainViewController" customModule="Wallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="FdF-Ro-9xE">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="QzO-LG-CA8">
+                                <rect key="frame" x="0.0" y="80" width="450" height="220"/>
+                                <subviews>
+                                    <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iU-8Z-pdl">
+                                        <rect key="frame" x="0.0" y="0.0" width="450" height="220"/>
+                                        <clipView key="contentView" drawsBackground="NO" id="578-iN-Cy1">
+                                            <rect key="frame" x="1" y="1" width="448" height="218"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <collectionView selectable="YES" id="plg-Wj-rmH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="448" height="158"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="20" minimumLineSpacing="20" id="MMS-6x-3Kt">
+                                                        <size key="itemSize" width="530" height="180"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="20"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="20"/>
+                                                        <edgeInsets key="sectionInset" left="20" right="20" top="0.0" bottom="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </collectionView>
+                                            </subviews>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </clipView>
+                                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="arR-7m-g6k">
+                                            <rect key="frame" x="1" y="203" width="408" height="16"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="0AW-bL-TTl">
+                                            <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                    </scrollView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8iU-8Z-pdl" firstAttribute="leading" secondItem="QzO-LG-CA8" secondAttribute="leading" id="8l4-tz-8lN"/>
+                                    <constraint firstAttribute="bottom" secondItem="8iU-8Z-pdl" secondAttribute="bottom" id="U6E-3g-u35"/>
+                                    <constraint firstAttribute="trailing" secondItem="8iU-8Z-pdl" secondAttribute="trailing" id="dAl-hB-n0k"/>
+                                    <constraint firstItem="8iU-8Z-pdl" firstAttribute="top" secondItem="QzO-LG-CA8" secondAttribute="top" id="rAu-8y-3D7"/>
+                                </constraints>
+                                <backgroundFilters>
+                                    <ciFilter name="CIGaussianBlur">
+                                        <configuration>
+                                            <null key="inputImage"/>
+                                            <real key="inputRadius" value="10"/>
+                                        </configuration>
+                                    </ciFilter>
+                                </backgroundFilters>
+                            </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Ll7-O5-OTI">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="80"/>
+                                <subviews>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="MZe-c2-8Gw">
+                                        <rect key="frame" x="0.0" y="0.0" width="225" height="80"/>
+                                        <buttonCell key="cell" type="square" title="Create " bezelStyle="shadowlessSquare" imagePosition="left" alignment="center" borderStyle="border" inset="2" id="KJd-yB-tNu">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="createAccount:" target="XfG-lQ-9wD" id="Kge-ev-IwJ"/>
+                                        </connections>
+                                    </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="979-ds-xKV">
+                                        <rect key="frame" x="225" y="0.0" width="225" height="80"/>
+                                        <buttonCell key="cell" type="square" title="Import" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="UIY-sM-rWm">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="importAccount:" target="XfG-lQ-9wD" id="cZP-au-CGB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="979-ds-xKV" firstAttribute="leading" secondItem="MZe-c2-8Gw" secondAttribute="trailing" id="52q-9S-Sj3"/>
+                                    <constraint firstItem="979-ds-xKV" firstAttribute="top" secondItem="Ll7-O5-OTI" secondAttribute="top" id="BgW-I6-7AN"/>
+                                    <constraint firstAttribute="bottom" secondItem="979-ds-xKV" secondAttribute="bottom" id="K2H-TN-WPT"/>
+                                    <constraint firstItem="MZe-c2-8Gw" firstAttribute="width" secondItem="Ll7-O5-OTI" secondAttribute="width" multiplier="0.5" id="XZJ-M5-9pa"/>
+                                    <constraint firstAttribute="bottom" secondItem="MZe-c2-8Gw" secondAttribute="bottom" id="fDB-ap-hP0"/>
+                                    <constraint firstAttribute="trailing" secondItem="979-ds-xKV" secondAttribute="trailing" id="glQ-bW-CeN"/>
+                                    <constraint firstItem="MZe-c2-8Gw" firstAttribute="top" secondItem="Ll7-O5-OTI" secondAttribute="top" id="kCf-kL-pwC"/>
+                                    <constraint firstItem="MZe-c2-8Gw" firstAttribute="leading" secondItem="Ll7-O5-OTI" secondAttribute="leading" id="sYV-LG-vi2"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="QzO-LG-CA8" secondAttribute="bottom" constant="80" id="1ws-vh-vre"/>
+                            <constraint firstItem="QzO-LG-CA8" firstAttribute="top" secondItem="FdF-Ro-9xE" secondAttribute="top" id="9E8-mc-ybT"/>
+                            <constraint firstItem="QzO-LG-CA8" firstAttribute="leading" secondItem="FdF-Ro-9xE" secondAttribute="leading" id="IXR-Ur-omB"/>
+                            <constraint firstAttribute="trailing" secondItem="Ll7-O5-OTI" secondAttribute="trailing" id="J54-T1-9O1"/>
+                            <constraint firstAttribute="bottom" secondItem="Ll7-O5-OTI" secondAttribute="bottom" id="VuH-eS-bM7"/>
+                            <constraint firstAttribute="trailing" secondItem="QzO-LG-CA8" secondAttribute="trailing" id="Yk5-ku-r14"/>
+                            <constraint firstItem="Ll7-O5-OTI" firstAttribute="leading" secondItem="FdF-Ro-9xE" secondAttribute="leading" id="jpr-uf-tLT"/>
+                            <constraint firstItem="Ll7-O5-OTI" firstAttribute="top" secondItem="QzO-LG-CA8" secondAttribute="bottom" id="nEk-3i-bhV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accsCollectionView" destination="plg-Wj-rmH" id="cPt-tN-SIZ"/>
+                    </connections>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5" y="-478"/>
+        </scene>
+        <!--Application-->
+        <scene sceneID="Wzg-kM-VYr">
+            <objects>
+                <customObject id="lXE-by-ucJ" customClass="AppDelegate" customModule="Wallet"/>
+                <customObject id="1J3-M2-r7K" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <application id="1aq-oD-izu" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="Xff-vk-B6s"/>
+                    <connections>
+                        <outlet property="delegate" destination="lXE-by-ucJ" id="qWo-4Z-7WJ"/>
+                    </connections>
+                </application>
+            </objects>
+            <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
