@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8FA9F4DA2125309E00EC1BAB"
-               BuildableName = "ThorModels_Mac.framework"
+               BuildableName = "ThorModels.framework"
                BlueprintName = "ThorModels_Mac"
                ReferencedContainer = "container:ThorModels.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FA9F4DA2125309E00EC1BAB"
-            BuildableName = "ThorModels_Mac.framework"
+            BuildableName = "ThorModels.framework"
             BlueprintName = "ThorModels_Mac"
             ReferencedContainer = "container:ThorModels.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FA9F4DA2125309E00EC1BAB"
-            BuildableName = "ThorModels_Mac.framework"
+            BuildableName = "ThorModels.framework"
             BlueprintName = "ThorModels_Mac"
             ReferencedContainer = "container:ThorModels.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8FA9F4DA2125309E00EC1BAB"
-            BuildableName = "ThorModels_Mac.framework"
+            BuildableName = "ThorModels.framework"
             BlueprintName = "ThorModels_Mac"
             ReferencedContainer = "container:ThorModels.xcodeproj">
          </BuildableReference>

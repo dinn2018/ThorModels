@@ -135,12 +135,10 @@ open class Account: NSObject {
                     let jsonData = try JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions.init(rawValue: 0))
                     send(String(data: jsonData, encoding: String.Encoding.utf8), nil)
                 } catch let e {
-                    print("encrypt err",e)
                     send(nil, e)
                 }
             }
         } catch let e {
-            print("encrypt err",e)
             send(nil, e)
         }
         return cancellable

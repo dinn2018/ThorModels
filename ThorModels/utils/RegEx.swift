@@ -11,13 +11,12 @@ open class RegEx: NSObject {
     
     var regex: NSRegularExpression?
     
-    init?(pattern: String) {
+    init?(pattern: String) throws {
         super.init()
         do {
             self.regex = try NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options.allowCommentsAndWhitespace)
         }catch let e {
-            print(e)
-            return nil
+            throw e
         }
     }
     
@@ -33,11 +32,11 @@ open class RegEx: NSObject {
     
     struct Bytes {
         
-        public static let decimal = RegEx(pattern: "^-?[0-9!]*$")!
+        public static let decimal = try! RegEx(pattern: "^-?[0-9!]*$")!
         
-        public static let hex = RegEx(pattern: "^-?0x[0-9A-Fa-f!]*$")!
+        public static let hex = try! RegEx(pattern: "^-?0x[0-9A-Fa-f!]*$")!
         
-        public static let hexAddress = RegEx(pattern: "^(0x)?[0-9A-Fa-f]{40}$")!
+        public static let hexAddress = try! RegEx(pattern: "^(0x)?[0-9A-Fa-f]{40}$")!
         
     }
 }

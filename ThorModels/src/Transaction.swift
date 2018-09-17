@@ -48,7 +48,6 @@ open class Transaction: NSObject {
     
     public func signingHash() -> Bytes32 {
         let signingData = try! RLPSerialization.encode(items: rlpItem.wrapRlpItem(items: self.signingObjs()))
-        print(signingData.hexString())
         return Bytes32(data: Crypto.BLAKE2B(data: signingData))!
     }
     
