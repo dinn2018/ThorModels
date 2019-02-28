@@ -45,6 +45,7 @@ open class Account: NSObject {
         hdnode_private_ckd(node, 0x80000000 | (818))
         hdnode_private_ckd(node, 0x80000000 | (0))
         hdnode_private_ckd(node, 0)
+        hdnode_private_ckd(node, 0)
         let mirror = Mirror(reflecting: node.pointee.private_key)
         let privateKey = mirror.children.map {$0.value as! Byte}
         self.setPrivateKey(privateKey: privateKey.data)
